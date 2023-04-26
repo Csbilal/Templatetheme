@@ -3,9 +3,12 @@ import { useMemo, useState } from "react";
 import { createCustomTheme } from "./utils/CustomTheme";
 import { responsiveFontSizes } from "@mui/material/styles";
 import Header from "./Component/Header";
+import Login from "./Pages/login/Login";
+import Register from "./Pages/Register/Register";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
-  const [mode, setMode] = useState("dark");
+  const [mode, setMode] = useState("light");
 
   // const theme = useTheme();
 
@@ -23,10 +26,14 @@ function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
-      <CssBaseline enableColorScheme />
-        <Header mode={mode} toggleMode={toggleMode}>
-          Header
-        </Header>
+        <CssBaseline enableColorScheme />
+        <Router>
+          {/* <Header mode={mode} toggleMode={toggleMode}></Header> */}
+          <Routes>
+            <Route path="/signin" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+          </Routes>
+        </Router>
       </ThemeProvider>
     </>
   );
