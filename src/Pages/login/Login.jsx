@@ -35,7 +35,7 @@ const Login = ({ onChange, value, ...otherProps }) => {
     setKeepSignedIn(event.target.checked);
   };
   return (
-    <Box mt={5}>
+    <Box mt={3}>
       <Container maxWidth="sm">
         <Box
           sx={{

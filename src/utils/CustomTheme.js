@@ -54,7 +54,7 @@ export const createCustomTheme = (mode) =>
       MuiCssBaseline: {
         styleOverrides: (theme) => `
 		    body {
-		      background-color: ${theme.palette.mode === "dark" ? "#000" : "#fff"}
+		      background-color: ${theme.palette.mode === "dark" ? "#0f6059" : "#fff"}
 		    }
 		  `,
       },
