@@ -5,25 +5,23 @@ import MuiDrawer from "@mui/material/Drawer";
 import MuiAppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import List from "@mui/material/List";
-import CssBaseline from "@mui/material/CssBaseline";
+
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import ListItem from "@mui/material/ListItem";
+
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
+
 import {
   Avatar,
   Button,
   Collapse,
   Container,
-  ListSubheader,
   Menu,
   MenuItem,
 } from "@mui/material";
@@ -80,6 +78,7 @@ const AppBar = styled(MuiAppBar, {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
   }),
+
   ...(open && {
     marginLeft: drawerWidth,
     width: `calc(100% - ${drawerWidth}px)`,
@@ -93,13 +92,11 @@ const AppBar = styled(MuiAppBar, {
 const Drawer = styled(MuiDrawer, {
   shouldForwardProp: (prop) => prop !== "open",
 })(({ theme, open }) => ({
-  bgcolor: "red",
   width: drawerWidth,
   flexShrink: 0,
   whiteSpace: "nowrap",
   boxSizing: "border-box",
   ...(open && {
-   
     "& .MuiDrawer-paper": openedMixin(theme),
   }),
   ...(!open && {
@@ -181,7 +178,6 @@ export default function MiniDrawer({ mode, toggleMode }) {
 
   return (
     <Box sx={{ display: "flex" }}>
-      <CssBaseline />
       <AppBar position="fixed" open={opened}>
         <Toolbar>
           <IconButton
